@@ -1,0 +1,138 @@
+@import '../base/reset';
+@import '../base/colors';
+@import '../base/variables';
+@import 'layout/extend';
+@import 'layout/mixin';
+
+body {
+    font-family: $font;
+    box-sizing: border-box;
+    @include transition(all 0.7s ease);
+}
+
+// Header Section
+
+header {
+    padding: 30px;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 20% auto;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        text-align: left;
+        svg {
+            font-size: 40px;
+            color: $brand-color;
+        }
+    }
+
+    .menu {
+        text-align: right;
+
+        svg {
+            font-size: 25px;
+            color: $brand-color;
+            z-index: 999;
+            float: right;
+        }
+
+        svg#cancel {
+            font-size: 40px;
+        }
+
+        .nav-items {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: -1;
+            display: none;
+            
+            ul {
+                height: 100%;
+                top: 30%;
+                position: absolute;
+                left: 48%;
+
+                @include respond-to(smallDevices) {
+                    left: 45%;
+                }
+
+                li {
+                    list-style-type: none;
+                    padding: 10px 0;
+
+                    a {
+                        color: $white;
+                        font-size: 18px;
+                        @include transition(all 0.7s ease);
+
+                        &:hover {
+                            color: $brand-color;
+                            @include transition(all 0.7s ease);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Header Section
+
+// Banner Section
+
+.banner-section {
+    text-align: center;
+    padding: 100px 0;
+    background: #fff;
+    @include linearGradient($primary-gradient, $secondary-gradient);
+    // background: -moz-linear-gradient(-45deg, #e5e5e5 3%, #4937d3 100%);
+    // background: -webkit-linear-gradient(-45deg, #e5e5e5 3%,#4937d3 100%);
+    // background: linear-gradient(135deg, #e5e5e5 3%,#4937d3 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#4937d3',GradientType=1 );
+
+    p {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 100px;
+        margin: 30px 0;
+        padding-bottom: 15px;
+        color: $brand-color;
+        border-top: 3px solid $brand-color;
+        border-bottom: 3px solid $brand-color;
+    }
+
+    .typed {
+        font-size: 30px;
+    }
+}
+
+// Banner Section
+
+
+
+
+.wrapper-background {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -3;
+
+    .particles-section {
+        position: relative;
+        z-index: 1;
+    }
+}
