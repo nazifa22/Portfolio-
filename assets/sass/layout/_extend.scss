@@ -1,3 +1,39 @@
 @import '../base/_colors';
 @import '../base/_variables';
 @import '../layout/_mixin';
+
+%title {
+    text-align: center;
+    padding: 20px 0;
+
+    .muted-title {
+        position: absolute;
+        font-size: 100px;
+        z-index: -1;
+        color: $title-color;
+        top: -10px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        display: block;
+        letter-spacing: -5px;
+
+        @include respond-to(smallDevices) {
+            font-size: 75px !important;
+            top: 5px !important;
+        }
+    }
+
+    h2 {
+        font-size: 60px;
+        text-transform: capitalize;
+
+        @include respond-to(smallDevices) {
+            font-size: 53px !important;
+        }
+
+        span {
+            color: $brand-color;
+        }
+    }
+}

@@ -1,8 +1,8 @@
 @import '../base/reset';
 @import '../base/colors';
 @import '../base/variables';
-@import 'layout/extend';
-@import 'layout/mixin';
+@import '../layout/extend';
+@import '../layout/mixin';
 
 body {
     font-family: $font;
@@ -13,7 +13,11 @@ body {
 // Header Section
 
 header {
-    padding: 30px;
+    padding: 30px 60px;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 
     .grid-container {
         display: grid;
@@ -92,16 +96,22 @@ header {
 
 .banner-section {
     text-align: center;
-    padding: 100px 0;
-    background: #fff;
-    @include linearGradient($primary-gradient, $secondary-gradient);
-    // background: -moz-linear-gradient(-45deg, #e5e5e5 3%, #4937d3 100%);
-    // background: -webkit-linear-gradient(-45deg, #e5e5e5 3%,#4937d3 100%);
-    // background: linear-gradient(135deg, #e5e5e5 3%,#4937d3 100%);
-    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#4937d3',GradientType=1 );
+    padding: 200px 0;
+    background: $bg;
+    // background-image: url(../../assets/images/the-phope-537400-unsplash.jpg);
+    @include clip-path(polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%));
+    background-size: cover;
+
+    @include respond-to(smallDevices) {
+        padding: 150px 0 !important;
+    }
 
     p {
         font-size: 40px;
+
+        @include respond-to(smallDevices) {
+            font-size: 25px !important;
+        }
     }
 
     h1 {
@@ -111,15 +121,101 @@ header {
         color: $brand-color;
         border-top: 3px solid $brand-color;
         border-bottom: 3px solid $brand-color;
+
+        @include respond-to(smallDevices) {
+            font-size: 50px !important;
+        }
     }
 
     .typed {
         font-size: 30px;
+
+        @include respond-to(smallDevices) {
+            font-size: 25px !important;
+        }
     }
 }
 
 // Banner Section
 
+// About Section
+
+#about {
+    padding: 100px 0;
+
+    @include respond-to(smallDevices) {
+        padding: 50px 0 !important;
+    }
+
+    .title {
+        @extend %title;
+    }
+
+    h3 {
+        font-size: 35px; 
+
+        @include respond-to(smallDevices) {
+            font-size: 30px !important;
+        }
+
+        span {
+            color: $brand-color;
+        }
+    }
+
+    h4 {
+        padding: 10px 0 0;
+        font-size: 25px;
+
+        @include respond-to(smallDevices) {
+            font-size: 20px !important;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        padding: 10px 0;
+        line-height: 22px;
+    }
+
+    .info {
+        padding: 10px 0 25px;
+
+        h5 {
+            font-weight: bold;
+            line-height: 22px;
+    
+            span {
+                font-weight: normal;
+            }
+        }
+    }
+
+    button {
+        border: 1px solid $brand-color !important;
+        color: $brand-color !important;
+        border-radius: 25px !important;
+
+        &:hover {
+            background-color: $brand-color !important;
+            color: $white !important;
+
+            svg {
+                margin-left: 6px;
+                @include transition(all 0.3s ease);
+            }
+        }
+
+        svg {
+            margin-left: 3px;
+            padding-top: 5px;
+            font-size: 20px;
+            @include transition(all 0.3s ease);
+        }
+    }
+}
+
+// About Section
 
 
 

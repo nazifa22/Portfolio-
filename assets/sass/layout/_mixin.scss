@@ -13,6 +13,12 @@
           transform: $property;
 } 
 
+@mixin clip-path($property) {
+  -webkit-clip-path: $property;
+      -ms-clip-path: $property;
+          clip-path: $property;
+} 
+
 @mixin transition($property) {
   -webkit-transition: $property;
       -ms-transition: $property;

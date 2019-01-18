@@ -20,6 +20,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+  
+  $(".logo").draggable();
 
   $("#cancel").hide();
   $("#bar").click(function(){
@@ -33,5 +35,9 @@ $(document).ready(function(){
     $(this).hide();
     $("#bar").show();
   });
-  
+
 });
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
