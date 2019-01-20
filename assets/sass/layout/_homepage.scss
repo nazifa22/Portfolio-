@@ -4,6 +4,10 @@
 @import '../layout/extend';
 @import '../layout/mixin';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font;
     box-sizing: border-box;
@@ -38,7 +42,7 @@ header {
         text-align: right;
 
         svg {
-            font-size: 25px;
+            font-size: 30px;
             color: $brand-color;
             z-index: 999;
             float: right;
@@ -134,6 +138,30 @@ header {
             font-size: 25px !important;
         }
     }
+
+    .scroll {
+        padding: 100px 0 0;
+
+        a {
+            @include transform(rotate(268deg));
+            position: absolute;
+            left: 45%;
+            color: $brand-color;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 3px;
+            @include transition(all 0.7s ease);
+
+            @include respond-to(smallDevices) {
+                left: 40% !important;
+            }
+
+            &:hover {
+                text-decoration: none;
+                @include transition(all 0.7s ease);
+            }
+        }
+    }
 }
 
 // Banner Section
@@ -141,10 +169,21 @@ header {
 // About Section
 
 #about {
-    padding: 100px 0;
+    padding: 80px 0;
 
     @include respond-to(smallDevices) {
         padding: 50px 0 !important;
+    }
+
+    img {
+        box-shadow: 0 0 15px 3px rgba(224, 224, 224, 0.85);
+        border-radius: 3px;
+        border-top-left-radius: 65px;
+        border-bottom-right-radius: 65px;
+
+        @include respond-to(handhelds) {
+            margin-bottom: 20px !important;
+        }
     }
 
     .title {
@@ -164,7 +203,7 @@ header {
     }
 
     h4 {
-        padding: 10px 0 0;
+        padding: 20px 0;
         font-size: 25px;
 
         @include respond-to(smallDevices) {
@@ -179,11 +218,11 @@ header {
     }
 
     .info {
-        padding: 10px 0 25px;
+        padding: 20px 0 25px;
 
         h5 {
             font-weight: bold;
-            line-height: 22px;
+            line-height: 30px;
     
             span {
                 font-weight: normal;
@@ -192,32 +231,283 @@ header {
     }
 
     button {
-        border: 1px solid $brand-color !important;
-        color: $brand-color !important;
-        border-radius: 25px !important;
+        @extend %button;
 
-        &:hover {
-            background-color: $brand-color !important;
-            color: $white !important;
-
-            svg {
-                margin-left: 6px;
-                @include transition(all 0.3s ease);
-            }
+        a {
+            color: $brand-color;
         }
+    }
 
-        svg {
-            margin-left: 3px;
-            padding-top: 5px;
-            font-size: 20px;
-            @include transition(all 0.3s ease);
-        }
+    .icons {
+        @extend %icons;
     }
 }
 
 // About Section
 
+//Skills Section
 
+#skills {
+
+    .title {
+        @extend %title;
+    }
+
+    .progress {
+        margin: 20px 0 30px;
+        
+        .progress-bar {
+            background-color: $brand-color !important;
+        }
+    }
+
+    div {
+        font-weight: bold;
+        color: $brand-color;
+    }
+}
+
+//Skills Section
+
+// Resume
+
+#resume {
+    padding: 50px 0;
+
+    @include respond-to(smallDevices) {
+        padding: 15px 0 0;
+    }
+
+    .title {
+        @extend %title;
+    }
+
+    .education {
+        border-left: 1px solid $brand-color;
+        padding: 20px 0 0px 30px;
+
+        &::before {
+            @extend %design;
+            width: 30px;
+            height: 1px;
+            left: 0;
+            top: 0;
+        }
+
+        &::after {
+            @extend %design;
+            width: 30px;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+        }
+
+        span {
+            @extend %resume-span;
+        }
+
+        svg {
+            @extend %resume-svg;
+        }
+    }
+
+    .edu {
+        padding: 10px 48px 30px;
+
+        &::before {
+            @extend %design;
+            width: 20px;
+            height: 20px;
+            left: 5px;
+            border-radius: 10px;
+            background-color: $white;
+        }
+    }
+
+    .experience {
+        padding: 20px 30px;
+
+        span {
+            @extend %resume-span;
+        }
+
+        svg {
+            @extend %resume-svg;
+        }
+
+        .work {
+            padding: 10px 48px 30px;
+
+            &::before {
+                @extend %design;
+                width: 20px;
+                height: 20px;
+                left: 5px;
+                top: 20px;
+                border-radius: 10px;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+// Resume
+
+//Resume Section
+
+#services {
+
+    .title {
+        @extend %title;
+    }
+
+    .overlay {
+        border-top-right-radius: 40px;
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(54, 40, 158, 0.85);
+        opacity: 0.3;
+        z-index: -1;
+        box-shadow: 0px 0px 10px 2px #000;
+        border-bottom-left-radius: 40px;
+    }
+
+    .service-section {
+        padding: 50px 30px;
+
+        svg {
+            font-size: 40px;
+        }
+
+        span {
+            position: absolute;
+            right: 60px;
+            font-size: 40px;
+            color: $brand-color;
+            opacity: 0.3;
+            font-weight: bold;
+        }
+
+        h3 {
+            padding: 30px 0 10px;
+            font-size: 20px;
+        }
+
+        p {
+            line-height: 20px;
+            font-size: 15px;
+        }
+    }
+
+    .row-1 {
+        margin-bottom: 40px;
+    }
+
+    .margin-sm {
+        @include respond-to(smallDevices) {
+            margin-bottom: 30px !important;
+        }
+    }
+}
+
+//Resume Section
+
+// Contact Section
+
+#contact {
+    padding: 40px 0;
+
+    .title {
+        @extend %title;
+    }
+
+    label {
+        font-size: 18px;
+        color: $brand-color;
+        margin-bottom: 20px;
+    }
+
+    input, textarea {
+        border-color: $brand-color !important;
+    }
+
+    button {
+        @extend %button;
+        padding: 10px 45px !important;
+        border-radius: 46px !important;
+    }
+
+    .icons {
+        @extend %icons;
+        margin-top: 20px;
+    }
+
+    h5 {
+        line-height: 30px;
+    }
+
+    .map {
+        margin: 35px 0 0;
+    }
+}
+
+// Contact Section
+
+// Footer Section
+
+footer {
+    padding: 40px 0;
+    background: $brand-color;
+    color: $white;
+
+    p {
+        font-size: 14px;
+    }
+}
+
+// Footer Section
+
+// Scroll To Top
+
+.scroll-to-top {
+
+    #return-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: $brand-color;
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-decoration: none;
+        @include border-radius(35px);
+        @include transition(all 0.3s linear);
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        &:hover svg {
+            color: #fff;
+            top: 5px;
+        }
+
+        svg {
+            color: #fff;
+            margin: 0;
+            position: relative;
+            left: 19px;
+            top: 13px;
+            font-size: 19px;
+            @include transition(all 0.3s linear);
+        }
+    }
+}
+
+// Scroll To Top
+
+// Particle
 
 .wrapper-background {
     position: fixed;
@@ -232,3 +522,5 @@ header {
         z-index: 1;
     }
 }
+
+// Particle

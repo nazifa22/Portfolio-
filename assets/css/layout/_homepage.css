@@ -95,30 +95,31 @@ input, select {
 img {
   width: 100%; }
 
-#about .title {
+#about .title, #skills .title {
   text-align: center;
   padding: 20px 0; }
-  #about .title .muted-title {
+  #about .title .muted-title, #skills .title .muted-title {
     position: absolute;
     font-size: 100px;
     z-index: -1;
-    color: #e6e6e6;
+    color: #e9eaf7;
     top: -10px;
     left: 0;
     text-align: center;
     width: 100%;
-    display: block; }
+    display: block;
+    letter-spacing: -5px; }
     @media only screen and (max-width: 768px) {
-      #about .title .muted-title {
+      #about .title .muted-title, #skills .title .muted-title {
         font-size: 75px !important;
         top: 5px !important; } }
-  #about .title h2 {
+  #about .title h2, #skills .title h2 {
     font-size: 60px;
     text-transform: capitalize; }
     @media only screen and (max-width: 768px) {
-      #about .title h2 {
+      #about .title h2, #skills .title h2 {
         font-size: 53px !important; } }
-    #about .title h2 span {
+    #about .title h2 span, #skills .title h2 span {
       color: rgba(54, 40, 158, 0.85); }
 
 body {
@@ -199,8 +200,7 @@ header {
 .banner-section {
   text-align: center;
   padding: 200px 0;
-  background: #fff;
-  background-image: url(../../assets/images/the-phope-537400-unsplash.jpg);
+  background: #F6F7FE;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   -ms-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
@@ -239,6 +239,46 @@ header {
     @media only screen and (max-width: 768px) {
       #about h3 {
         font-size: 30px !important; } }
+    #about h3 span {
+      color: rgba(54, 40, 158, 0.85); }
+  #about h4 {
+    padding: 10px 0 0;
+    font-size: 25px; }
+    @media only screen and (max-width: 768px) {
+      #about h4 {
+        font-size: 20px !important; } }
+  #about p {
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: 22px; }
+  #about .info {
+    padding: 10px 0 25px; }
+    #about .info h5 {
+      font-weight: bold;
+      line-height: 22px; }
+      #about .info h5 span {
+        font-weight: normal; }
+  #about button {
+    border: 1px solid rgba(54, 40, 158, 0.85) !important;
+    color: rgba(54, 40, 158, 0.85) !important;
+    border-radius: 25px !important; }
+    #about button:hover {
+      background-color: rgba(54, 40, 158, 0.85) !important;
+      color: #fff !important; }
+      #about button:hover svg {
+        margin-left: 6px;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+    #about button svg {
+      margin-left: 3px;
+      padding-top: 5px;
+      font-size: 20px;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
 
 .wrapper-background {
   position: fixed;

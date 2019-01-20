@@ -4,19 +4,20 @@
 
 %title {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0 40px;
 
     .muted-title {
         position: absolute;
         font-size: 100px;
         z-index: -1;
-        color: $title-color;
+        color: $brand-color;
         top: -10px;
         left: 0;
         text-align: center;
         width: 100%;
         display: block;
         letter-spacing: -5px;
+        opacity: 0.1;
 
         @include respond-to(smallDevices) {
             font-size: 75px !important;
@@ -27,6 +28,7 @@
     h2 {
         font-size: 60px;
         text-transform: capitalize;
+        color: $black;
 
         @include respond-to(smallDevices) {
             font-size: 53px !important;
@@ -34,6 +36,79 @@
 
         span {
             color: $brand-color;
+        }
+    }
+}
+
+%resume-span {
+    font-weight: bold;
+    color: $brand-color;
+    font-size: 20px;
+}
+
+%resume-svg {
+    color: $brand-color;    
+    font-size: 20px;
+    opacity: 0.2;
+}
+
+%design {
+    content: "";
+    position: absolute;
+    border: 1px solid $brand-color;
+}
+
+%button {
+    border: 1px solid $brand-color !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    color: $brand-color;
+
+    &:hover {
+        background-color: $brand-color !important;
+        color: $white;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+
+        svg {
+            margin-left: 6px;
+            @include transition(all 0.3s ease);
+        }
+    }
+
+    svg {
+        margin-left: 3px;
+        padding-top: 5px;
+        font-size: 20px;
+        @include transition(all 0.3s ease);
+    }
+}
+
+%icons {
+    padding: 0 0 40px;
+    color: $brand-color !important;
+
+    span {
+        font-weight: bold;
+        font-size: 18px;
+        color: $brand-color !important;
+    }
+
+    a {
+
+        svg {
+            color: $brand-color !important;
+            margin-left: 10px;
+            font-size: 18px;
+            @include transition(all 0.7s ease);
+
+            &::hover {
+                @include transition(all 0.7s ease);
+                @include transform(scale(1.5,1.5));
+            }
         }
     }
 }
