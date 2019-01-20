@@ -156,6 +156,14 @@ header {
                 left: 40% !important;
             }
 
+            @include respond-to(handhelds) {
+                left: 38% !important;
+            }
+
+            @include respond-to(d390) {
+                left: 35% !important;
+            }
+
             &:hover {
                 text-decoration: none;
                 @include transition(all 0.7s ease);
@@ -449,6 +457,12 @@ header {
 
     .map {
         margin: 35px 0 0;
+    }
+
+    .info {
+        @include respond-to(smallDevices) {
+            margin-top: 20px;
+        }
     }
 }
 
