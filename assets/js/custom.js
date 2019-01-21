@@ -23,7 +23,7 @@ $(document).ready(function(){
   
   $(".logo").draggable();
 
-  // $(".scroll-to-top").draggable();
+  $(".scroll-to-top").draggable();
 
   $("#cancel").hide();
   $("#bar").click(function(){
@@ -37,6 +37,15 @@ $(document).ready(function(){
     $(this).hide();
     $("#bar").show();
   });
+
+  
+  $(".item").click(function(){
+    $(".nav-items").fadeOut("300");
+    $("#cancel").hide();
+    $("#bar").show();
+  });
+
+  
 
   $(".html").animate({
     'width': '95%'
@@ -77,23 +86,65 @@ $(document).ready(function(){
   document.getElementById("return-to-top").style.display = "none";
 
 	$(window).scroll(function(){
-		if($(this).scrollTop() >= 100)
+		if($(this).scrollTop() >= 150)
 			{
 				document.getElementById("return-to-top").style.display = "";
 			}
 			else 
 			{
 				document.getElementById("return-to-top").style.display = "none";
-
 			}
 	});
 
 	$("#return-to-top").click(function(){
 		$("body,html").animate({
 			scrollTop: 0
-		}, 700);
-	});
+		}, 500);
+  });
+  
+  $(".icon").click( function(){
+    event.preventDefault();
+    if ( $(this).hasClass("inout") ) {
+    $(".demo_pannel_box").stop().animate({left:"0px"}, 500);
+    } else {
+    $(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
+    }
+    $(this).toggleClass("inout");
+    return false;
+    });
 
+    $(".icon").draggable();
+
+});
+
+$(document).ready(function(){
+  $("span.color-1").click(function(){
+      $("body").removeClass().addClass("color-1-bar") ;
+  });
+  $("span.color-2").click(function(){
+      $("body").removeClass().addClass("color-2-bar");
+  });
+  $("span.color-3").click(function(){
+      $("body").removeClass().addClass("color-3-bar");
+  });
+  $("span.color-4").click(function(){
+      $("body").removeClass().addClass("color-4-bar");
+  });
+  $("span.color-5").click(function(){
+      $("body").removeClass().addClass("color-5-bar");
+  });
+  $("span.color-6").click(function(){
+      $("body").removeClass().addClass("color-6-bar");
+  });
+  $("span.color-7").click(function(){
+      $("body").removeClass().addClass("color-7-bar");
+  });
+  $("span.color-8").click(function(){
+      $("body").removeClass().addClass("color-8-bar");
+  });
+  $("span.color-9").click(function(){
+      $("body").removeClass().addClass("color-9-bar");
+  });
 });
 
 $(function () {
