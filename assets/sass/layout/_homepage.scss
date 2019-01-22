@@ -484,8 +484,6 @@ footer {
 
 // Scroll To Top
 
-// .scroll-to-top {
-
     #return-to-top {
         position: fixed;
         // position: absolute;
@@ -518,7 +516,6 @@ footer {
             @include transition(all 0.3s linear);
         }
     }
-// }
 
 // Scroll To Top
 
@@ -747,11 +744,8 @@ footer {
 
         // Scroll To Top
 
-        .scroll-to-top {
-
-            #return-to-top {
-                background: nth($brand-colors, $i);
-            }
+        #return-to-top {
+            background: nth($brand-colors, $i);
         }
 
         // Scroll To Top
