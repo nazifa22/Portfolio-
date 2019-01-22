@@ -760,6 +760,17 @@ footer {
 
         // Scroll To Top
 
+        // Color Panel
+
+        .icon {
+
+            svg {
+                color: nth($brand-colors, $i);
+            }
+        }
+
+        // Color Panel
+
     }
 
 }
@@ -782,7 +793,7 @@ footer {
     border-bottom-right-radius: 5px;
     
 	svg {
-		color: $white;
+		color: $brand-color;
 		font-size: 30px;
 		text-align: center;
         margin-top: 13px;
