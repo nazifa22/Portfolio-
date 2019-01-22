@@ -21,7 +21,11 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   
-  $(".logo").draggable();
+  $(".logo").draggable(function(){
+    $("#return-to-top").css({
+      'position': 'absolute'
+    });
+  });
 
   $(".scroll-to-top").draggable();
 
@@ -103,14 +107,18 @@ $(document).ready(function(){
   });
   
   $(".icon").click( function(){
+
     event.preventDefault();
+
     if ( $(this).hasClass("inout") ) {
-    $(".demo_pannel_box").stop().animate({left:"0px"}, 500);
-    } else {
-    $(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
+      $(".demo_pannel_box").stop().animate({left:"0px"}, 500);
+    } 
+    else {
+      $(".demo_pannel_box").stop().animate({left:"-200px"}, 500);
     }
+
     $(this).toggleClass("inout");
-    return false;
+     return false;
     });
 
     $(".icon").draggable();
@@ -118,35 +126,45 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+
   $("span.color-1").click(function(){
       $("body").removeClass().addClass("color-1-bar") ;
   });
+
   $("span.color-2").click(function(){
       $("body").removeClass().addClass("color-2-bar");
   });
+
   $("span.color-3").click(function(){
       $("body").removeClass().addClass("color-3-bar");
   });
+
   $("span.color-4").click(function(){
       $("body").removeClass().addClass("color-4-bar");
   });
+
   $("span.color-5").click(function(){
       $("body").removeClass().addClass("color-5-bar");
   });
+
   $("span.color-6").click(function(){
       $("body").removeClass().addClass("color-6-bar");
   });
+
   $("span.color-7").click(function(){
       $("body").removeClass().addClass("color-7-bar");
   });
+
   $("span.color-8").click(function(){
       $("body").removeClass().addClass("color-8-bar");
   });
+
   $("span.color-9").click(function(){
       $("body").removeClass().addClass("color-9-bar");
   });
+
 });
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 })

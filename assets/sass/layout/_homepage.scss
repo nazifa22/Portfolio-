@@ -298,7 +298,7 @@ header {
             @extend %design;
             width: 30px;
             height: 1px;
-            left: 0;
+            left: -15px;
             top: 0;
         }
 
@@ -306,7 +306,7 @@ header {
             @extend %design;
             width: 30px;
             height: 1px;
-            left: 0;
+            left: -15px;
             bottom: 0;
         }
 
@@ -326,7 +326,7 @@ header {
             @extend %design;
             width: 20px;
             height: 20px;
-            left: 5px;
+            left: -11px;
             border-radius: 10px;
             background-color: $white;
         }
@@ -473,10 +473,10 @@ header {
 footer {
     padding: 40px 0;
     background: $brand-color;
-    color: $white;
 
     p {
         font-size: 14px;
+        color: $white;
     }
 }
 
@@ -484,11 +484,11 @@ footer {
 
 // Scroll To Top
 
-.scroll-to-top {
+// .scroll-to-top {
 
     #return-to-top {
-        // position: fixed;
-        position: absolute;
+        position: fixed;
+        // position: absolute;
         bottom: 20px;
         right: 20px;
         background: $brand-color;
@@ -518,18 +518,258 @@ footer {
             @include transition(all 0.3s linear);
         }
     }
-}
+// }
 
 // Scroll To Top
+
+// Colors
+
+@for $i from 1 through 9 {
+
+	.color-#{$i}-bar {
+        
+        // Header Section
+
+        header {
+
+            .logo {
+                svg {
+                    color: nth($brand-colors, $i);
+                }
+            }
+
+            .menu {
+
+                svg {
+                    color: nth($brand-colors, $i);
+                }
+
+                .nav-items {
+                    
+                    ul {
+
+                        li {
+
+                            a {
+
+                                &:hover {
+                                    color: nth($brand-colors, $i);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Header Section
+
+        // Banner Section
+
+        .banner-section {
+
+            h1 {
+                color: nth($brand-colors, $i);
+                border-top: 3px solid nth($brand-colors, $i);
+                border-bottom: 3px solid nth($brand-colors, $i);
+            }
+
+            .scroll {
+
+                a {
+                    color: nth($brand-colors, $i);
+                }
+            }
+        }
+
+        // Banner Section
+
+        // About Section
+
+        #about {
+
+            h3 {
+
+                span {
+                    color: nth($brand-colors, $i);
+                }
+            }
+
+            button {
+                @extend %button;
+
+                a {
+                    color: nth($brand-colors, $i);
+                }
+            }
+
+            .icons {
+                @extend %icons;
+            }
+        }
+
+        // About Section
+
+        //Skills Section
+
+        #skills {
+
+            .title {
+                @extend %title;
+            }
+
+            .progress {
+                
+                .progress-bar {
+                    background-color: nth($brand-colors, $i) !important;
+                }
+            }
+
+            div {
+                color: nth($brand-colors, $i);
+            }
+        }
+
+        //Skills Section
+
+        // Resume Section
+
+        #resume {
+
+            .title {
+                @extend %title;
+            }
+
+            .education {
+
+                border-left: 1px solid nth($brand-colors, $i);
+
+                &::before {
+                    @extend %design;
+                }
+
+                &::after {
+                    @extend %design;
+                }
+
+                span {
+                    @extend %resume-span;
+                }
+
+                svg {
+                    @extend %resume-svg;
+                }
+            }
+
+            .edu {
+
+                &::before {
+                    @extend %design;
+                }
+            }
+
+            .experience {
+
+                span {
+                    @extend %resume-span;
+                }
+
+                svg {
+                    @extend %resume-svg;
+                }
+
+                .work {
+
+                    &::before {
+                        @extend %design;
+                    }
+                }
+            }
+        }
+
+        //Resume Section
+
+        //Services Section
+
+        #services {
+
+            .title {
+                @extend %title;
+            }
+
+            .overlay {
+                background-color: nth($brand-colors, $i);
+            }
+
+            .service-section {
+
+                span {
+                    color: nth($brand-colors, $i);
+                }
+
+            }
+
+        }
+
+        //Services Section
+
+        // Contact Section
+
+        #contact {
+
+            label {
+                color: nth($brand-colors, $i);
+            }
+
+            input, textarea {
+                border-color: nth($brand-colors, $i) !important;
+            }
+
+            button {
+                @extend %button;
+            }
+
+            .icons {
+                @extend %icons;
+            }
+        }
+
+        // Contact Section
+
+        // Footer Section
+
+        footer {
+            background: nth($brand-colors, $i);
+            color: $white;
+        }
+
+        // Footer Section
+
+        // Scroll To Top
+
+        .scroll-to-top {
+
+            #return-to-top {
+                background: nth($brand-colors, $i);
+            }
+        }
+
+        // Scroll To Top
+
+    }
+
+}
+
+// Colors
 
 // Color Panel
 
 .icon{
 	position: absolute;
-	width: 70px;
+	width: 65px;
 	height: 55px;
 	display: block;
-	right:-50px;
+	right: -65px;
 	top: 0px;
 	background: #111;
 	cursor: pointer;
@@ -542,7 +782,7 @@ footer {
 		font-size: 30px;
 		text-align: center;
         margin-top: 13px;
-        margin-left: 14px;
+        margin-left: -5px;
 		cursor: pointer;
 	}
 }
@@ -572,7 +812,7 @@ footer {
 	    @for $i from 1 through 9{
 
 	    	.color-#{$i}{
-	    		// background-color: nth($brand-color, $i);
+	    		background-color: nth($brand-colors, $i);
         	}
         
 	    }

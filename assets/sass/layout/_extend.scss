@@ -112,3 +112,65 @@
         }
     }
 }
+
+@for $i from 1 through 9 {
+
+	.color-#{$i}-bar {
+
+        %title {
+            .muted-title {
+                color: nth($brand-colors, $i);
+            }
+        
+            h2 {
+        
+                span {
+                    color: nth($brand-colors, $i);
+                }
+            }
+
+        }
+        
+        %resume-span {
+            color: nth($brand-colors, $i);
+        }
+        
+        %resume-svg {
+            color: nth($brand-colors, $i); 
+        }
+        
+        %design {
+            border: 1px solid nth($brand-colors, $i); 
+        }
+        
+        %button {
+            border: 1px solid nth($brand-colors, $i) !important;
+            color: nth($brand-colors, $i);
+        
+            &:hover {
+                background-color: nth($brand-colors, $i) !important;
+                
+                a {
+                    color: $white;
+                }
+            }
+        }
+        
+        %icons {
+            color: nth($brand-colors, $i) !important;
+        
+            span {
+                color: nth($brand-colors, $i) !important;
+            }
+        
+            a {
+        
+                svg {
+                    color: nth($brand-colors, $i) !important;
+                }
+            }
+        }
+
+    }
+
+}
