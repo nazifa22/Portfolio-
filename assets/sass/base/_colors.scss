@@ -2,6 +2,7 @@ $overlay: rgba(8, 6, 6, 0.5);
 $black: #000;
 $white: #fff;
 $brand-color: rgba(54,40,158,.85);
+$section-bg:rgba(54,40,158,.5);
 $primary-gradient: #e5e5e5;
 $secondary-gradient: #4937d3;
 $title-color:#e9eaf7;
@@ -21,4 +22,16 @@ $Chocolate: rgba(60, 0, 0, 0.85);
 $DarkBurgundy: rgba(107, 0, 15, 0.85);
 $AlizarinCrimson: rgba(165, 107, 104, 0.85);
 
+$DeepKoamaru-bg: rgba(16, 38, 111, 0.1);
+$Mariner-bg: rgba(41, 128, 185, 0.1);
+$Gumbo-bg: rgba(136, 160, 168, 0.1);
+$Blackberry-bg: rgba(77, 1, 53, 0.1);
+$RoseBudCherry-bg: rgba(150, 0, 57, 0.1);
+$Bouquet-bg: rgba(140, 102, 127, 0.1);
+$Chocolate-bg: rgba(60, 0, 0, 0.1);
+$DarkBurgundy-bg: rgba(107, 0, 15, 0.1);
+$AlizarinCrimson-bg: rgba(165, 107, 104, 0.1);
+
 $brand-colors: $DeepKoamaru, $Mariner, $Gumbo, $Blackberry, $RoseBudCherry, $Bouquet, $Chocolate, $DarkBurgundy, $AlizarinCrimson;
+
+$section-bg: $DeepKoamaru-bg, $Mariner-bg, $Gumbo-bg, $Blackberry-bg, $RoseBudCherry-bg, $Bouquet-bg, $Chocolate-bg, $DarkBurgundy-bg, $AlizarinCrimson-bg;
