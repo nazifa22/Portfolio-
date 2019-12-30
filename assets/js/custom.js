@@ -68,7 +68,7 @@ $(document).ready(function(){
   });
 
   $(".jquery").animate({
-    'width': '90%'
+    'width': '60%'
   });
 
   $(".js").animate({
@@ -89,6 +89,18 @@ $(document).ready(function(){
 
   $(".c").animate({
     'width': '50%'
+  });
+  
+  $(".wp").animate({
+    'width': '70%'
+  });
+
+  $(".shopify").animate({
+    'width': '50%'
+  });
+
+  $(".git").animate({
+    'width': '80%'
   });
 
   document.getElementById("return-to-top").style.display = "none";

@@ -186,7 +186,7 @@
             }
 
             .overlay {
-                background-color: nth($brand-colors, $i);
+                border-color: nth($brand-colors, $i);
             }
 
             .service-section {
