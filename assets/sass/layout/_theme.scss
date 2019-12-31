@@ -173,6 +173,18 @@
                     }
                 }
             }
+
+            .achivements {
+                h3 {
+                    color: nth($brand-colors, $i);
+                }
+
+                p {
+                    span {
+                        color: nth($brand-colors, $i);
+                    }
+                }
+            }
         }
 
         //Resume Section

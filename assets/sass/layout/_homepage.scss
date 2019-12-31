@@ -354,6 +354,39 @@ header {
             }
         }
     }
+
+    .achivements {
+        h3 {
+            @include respond-to (landscapeTablets) {
+                padding-top: 30px;
+            }
+
+            svg {
+                font-size: 22px;
+                margin-right: 5px;
+            }
+
+            font-size: 25px;
+            color: $brand-color;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #444;
+            padding-bottom: 10px;
+            line-height: normal;
+
+            span {
+                color: $brand-color;
+                font-weight: bold;
+                font-size: 18px;
+
+                svg {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
 
 //Resume Section
