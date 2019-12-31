@@ -189,12 +189,16 @@
                 border-color: nth($brand-colors, $i);
             }
 
-            .service-section {
+            .front-content {
+                h3 {
+                    color: nth($brand-colors, $i) !important;
+                }
+            }
 
-                span {
+            .modal-header {
+                h5 {
                     color: nth($brand-colors, $i);
                 }
-
             }
 
         }
@@ -228,7 +232,6 @@
 
         footer {
             background: nth($brand-colors, $i);
-            color: $white;
         }
 
         // Footer Section
@@ -251,6 +254,15 @@
         }
 
         // Color Panel
+
+        // Scrollbar
+
+        ::-webkit-scrollbar-thumb
+        {
+            background: nth($brand-colors, $i) !important;
+        }
+
+        // Scrollbar
 
     }
 

@@ -12,11 +12,6 @@ $(document).ready(function(){
         loop: true
       });
 
-    /*var typed = new Typed(".typed", {
-      // Waits 1000ms after typing "First"
-      strings: ["First ^1000 sentence.", "Second sentence."]
-    });*/
-
 });
 
 $(document).ready(function(){

@@ -360,76 +360,19 @@ header {
 
 //Services Section
 
-// #services {
-
-//     .title {
-//         @extend %title;
-//     }
-
-//     .overlay {
-//         border-top: 4px solid $brand-color;
-//         opacity: 0.5;
-//     }
-
-//     .service-section {
-//         padding: 0px 30px;
-//         margin: 30px 0 40px;
-//         overflow: hidden;
-//         @include transition(all 0.7s ease);
-
-//         &:hover {
-//             transform: scale(1.1, 1.1);
-//             @include transition(all 0.7s ease);
-//         }
-
-//         svg {
-//             font-size: 40px;
-//         }
-
-//         span {
-//             position: absolute;
-//             right: 60px;
-//             font-size: 40px;
-//             color: $brand-color;
-//             opacity: 0.3;
-//             font-weight: bold;
-//         }
-
-//         h3 {
-//             padding: 30px 0 10px;
-//             font-size: 20px;
-//         }
-
-//         p {
-//             line-height: 20px;
-//             font-size: 15px;
-//         }
-//     }
-
-//     .row-1 {
-//         margin-bottom: 40px;
-//     }
-
-//     .margin-sm {
-//         @include respond-to(smallDevices) {
-//             margin-bottom: 30px !important;
-//         }
-//     }
-// }
-
 #services {
 
     .title {
         @extend %title;
     }
 
-    h1{
+    h1 {
         font-size:25px;
         text-align: left;
         text-transform:capitalize;
     }
 
-    .service-box{
+    .service-box {
        position: relative;
        overflow: hidden;
        margin-bottom:10px;
@@ -467,7 +410,7 @@ header {
             padding: 20px;
             text-align: center;
             transition: all .5s ease;
-            background-color: #474747;
+            background-color: #000;
             backface-visibility:hidden;
             transform-style: preserve-3d;
             -webkit-transform: translateY(110px) rotateX(-90deg);
@@ -485,10 +428,21 @@ header {
             }
 
             p {
-                font-size: 13px;
-                color: #b1b1b1;
-                margin:0;
-             }
+                font-size: 15px;
+                color: #fff;
+                margin: 0;
+                line-height: 18px;
+                text-align: left;
+            }
+            
+            a {
+                color: #fff;
+                text-align: left;
+                margin-top: 5px;
+                display: block;
+                text-decoration: none;
+                font-size: 12px;
+            }
        }
 
        .service-icon {
@@ -497,6 +451,10 @@ header {
         padding: 20px;
         text-align: center;
         transition: all .5s ease;
+
+        @include respond-to(smallDevices) {
+            height: auto !important;
+        }
 
         .front-content {
             position: relative;
@@ -507,27 +465,62 @@ header {
             -o-transform: translateY(-50%);
             transform: translateY(-50%);
 
-                i {
-                    font-size: 28px;
-                    color: #fff;
-                    font-weight: normal;
-                }
-
-                h3 {
-                    font-size: 15px;
-                    color: #fff;
-                    text-align: center;
-                    margin-bottom: 15px;
-                    text-transform: uppercase;
-                 }
+            svg {
+                font-size: 50px;
             }
+
+            h3 {
+                font-size: 20px;
+                color: $brand-color;
+                text-align: center;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                margin-top: 15px;
+                line-height: 28px;
+            }
+        }
        }
     }
-    
-    .yellow{background-color: #ffc000;}
-    .orange{background-color: #fc7f0c;}
-    .red{background-color: #e84b3a;}
-    .grey{background-color: #474747;}
+
+    .modal {
+        padding: 0px !important;
+    }
+
+    .modal-header {
+        h5 {
+            font-size: 30px;
+            color: $brand-color;
+            
+            svg {
+                font-size: 25px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .modal-body {
+        p {
+            line-height: 24px;
+            padding-bottom: 20px;
+        }
+
+        li {
+            svg {
+                margin-right: 5px;
+            }
+
+            list-style-type: none;
+            padding-left: 20px;
+            padding-bottom: 5px;
+            line-height: normal;
+        }
+    }
+
+    .modal-footer {
+        button {
+            @extend %button;
+        }
+    }
 }
 
 //Services Section
@@ -535,7 +528,7 @@ header {
 // Contact Section
 
 #contact {
-    padding: 0px 0 40px;
+    padding: 0px 0 60px;
 
     .title {
         @extend %title;
@@ -640,7 +633,7 @@ footer {
 	display: block;
 	right: -65px;
 	top: 0px;
-	background: #111;
+	background: gainsboro;
 	cursor: pointer;
 	z-index: 999;
 	border-top-right-radius: 5px;
@@ -663,7 +656,7 @@ footer {
 	top: 180px;
 	left: -200px;
 	text-align: center;
-	background: #111;
+	background: gainsboro;
     z-index: 9999;
     
 	.color_pannel_box {
@@ -707,3 +700,27 @@ footer {
 }
 
 // Particle
+
+// Scrollbar
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background: $brand-color;
+}
+
+//Scrollbar
